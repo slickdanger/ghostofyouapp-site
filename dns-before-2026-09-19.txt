@@ -1,0 +1,30 @@
+DNS INVENTORY — ghostofyouapp.com
+Captured 2026-09-19 21:08:32 UTC by plain public lookups (dig). Read-only.
+This is the BEFORE state, recorded prior to any DNS change. No change was made.
+
+NAMESERVERS  -> Namecheap BasicDNS (registrar-servers.com is Namecheap's).
+                Records are edited at Namecheap.
+ghostofyouapp.com.	1769	IN	NS	dns2.registrar-servers.com.
+ghostofyouapp.com.	1769	IN	NS	dns1.registrar-servers.com.
+
+APEX  ghostofyouapp.com
+ghostofyouapp.com.	382	IN	A	172.66.0.70
+  AAAA: (none)
+  CNAME: (none - apex is an A record)
+
+WWW  www.ghostofyouapp.com
+www.ghostofyouapp.com.	1768	IN	CNAME	ghostofyouapp.com.
+ghostofyouapp.com.	381	IN	A	172.66.0.70
+
+PRIVACY  privacy.ghostofyouapp.com   (Carrd - MUST NOT BE TOUCHED)
+privacy.ghostofyouapp.com. 1767	IN	A	172.66.0.70
+
+TERMS  terms.ghostofyouapp.com   (Carrd - MUST NOT BE TOUCHED)
+terms.ghostofyouapp.com. 1767	IN	A	172.66.0.70
+
+MAIL
+ghostofyouapp.com.	30	IN	MX	1 smtp.google.com.
+  TXT at apex: (NONE - no SPF record published)
+  _dmarc: "v=DMARC1; p=none;"
+  DKIM at the common selectors (default/google/selector1/selector2): none found
+  CAA: (none)
