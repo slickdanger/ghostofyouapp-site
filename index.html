@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ghost of You: your ghost picks up, even when you can't</title>
 <meta name="description" content="Ghost of You turns 15 seconds of your voice into an AI clone your friends can call any time. Free to start on iPhone. 18+.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
+@font-face{font-family:'Archivo';src:url('fonts/archivo-latin.woff2') format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url('fonts/instrumentsans-latin.woff2') format('woff2');font-weight:400 700;font-style:normal;font-display:swap}
+.per{white-space:nowrap;flex:0 0 auto}
+
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:#0A0A0E}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:#0A0A0E;overflow-x:hidden;font-family:'Instrument Sans',-apple-system,'Segoe UI',Helvetica,sans-serif}
@@ -25,6 +28,7 @@ img{max-width:100%}
  #privacy{padding-top:80px !important;padding-bottom:80px !important}
  #privacy>div{padding:36px 24px !important;gap:36px !important}
  #support>div{padding:32px 24px !important}
+ .price{font-size:40px !important}
  .panel{width:300px !important;margin-left:-150px !important;height:460px !important}
 }
 </style>
@@ -218,17 +222,17 @@ img{max-width:100%}
 <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: stretch;">
 <div style="flex: 1 1 280px; box-sizing: border-box; padding: 36px; border-radius: 28px; background: #15151E; border: 1px solid #2A2A38; display: flex; flex-direction: column; gap: 18px;">
 <h3 style="margin: 0; font-size: 20px; font-weight: 600;">Free</h3>
-<div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 800; font-size: 52px; line-height: 1;">$0</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px;"><span class="price" style="font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 800; font-size: 52px; line-height: 1;">$0</span></div>
 <p style="margin: 0; color: #C9C5D6;"><strong style="color: #F4F2EE; font-weight: 600;">5 minutes</strong> of ghost calls every month. Make your ghost, add friends, and try everything.</p>
 </div>
 <div style="flex: 1 1 280px; box-sizing: border-box; padding: 36px; border-radius: 28px; background: #1B1530; border: 2px solid #C5A4FF; display: flex; flex-direction: column; gap: 18px;">
 <h3 style="margin: 0; font-size: 20px; font-weight: 600;">Ghost Premium</h3>
-<div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 800; font-size: 52px; line-height: 1;">$9.99</span><span style="color: #C9C5D6;">per month</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px;"><span class="price" style="font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 800; font-size: 52px; line-height: 1;">$9.99</span><span class="per" style="color: #C9C5D6;">per month</span></div>
 <p style="margin: 0; color: #C9C5D6;"><strong style="color: #F4F2EE; font-weight: 600;">60 minutes</strong> of ghost calls every month. For people whose friends keep calling back.</p>
 </div>
 <div style="flex: 1 1 280px; box-sizing: border-box; padding: 36px; border-radius: 28px; background: #15151E; border: 1px solid #2A2A38; display: flex; flex-direction: column; gap: 18px;">
 <h3 style="margin: 0; font-size: 20px; font-weight: 600;">Ghost Premium+</h3>
-<div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 800; font-size: 52px; line-height: 1;">$19.99</span><span style="color: #C9C5D6;">per month</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px;"><span class="price" style="font-family: 'Archivo', sans-serif; font-stretch: 112%; font-weight: 800; font-size: 52px; line-height: 1;">$19.99</span><span class="per" style="color: #C9C5D6;">per month</span></div>
 <p style="margin: 0; color: #C9C5D6;"><strong style="color: #F4F2EE; font-weight: 600;">180 minutes</strong> of ghost calls every month. Three hours for the group chat that never sleeps.</p>
 </div>
 </div>
