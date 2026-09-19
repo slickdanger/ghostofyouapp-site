@@ -1,0 +1,36 @@
+DNS AFTER THE MOVE — ghostofyouapp.com
+Captured 2026-09-19 21:42:06 UTC. Read-only lookups. No change was made by Rocky.
+Compared against dns-before-2026-09-19.txt in this folder.
+
+⚠️ RESOLVER NOTE. This Mac's own resolver (the router, 2600:1700:5d90:910::1) still returned
+   the OLD apex address 172.66.0.70 when this was captured — a stale cache, the old records
+   having had a 30-minute lifetime. Every finding below is from PUBLIC resolvers
+   (1.1.1.1, confirmed identical on 8.8.8.8 and 9.9.9.9), not from the local one.
+
+CHANGED, AS INTENDED
+  APEX A   before: 172.66.0.70  (Carrd via Cloudflare)
+           now:    185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153 
+           ⇒ exactly the four GitHub Pages addresses, and 172.66.0.70 is GONE.
+  WWW      before: CNAME -> ghostofyouapp.com
+           now:    CNAME -> slickdanger.github.io.
+  TXT apex before: NONE — no SPF record was published
+           now:    "v=spf1 include:_spf.google.com ~all"
+           ⇒ exactly one SPF record.
+
+UNCHANGED, AS INTENDED
+  privacy  A 172.66.0.70   (Carrd — the app links to this)
+  terms    A 172.66.0.70   (Carrd — the app links to this)
+  MX       1 smtp.google.com.
+  _dmarc   "v=DMARC1; p=none;"
+  NS       dns1.registrar-servers.com. dns2.registrar-servers.com. 
+  AAAA     none | CAA none  (both absent before as well)
+
+PRESENT NOW, NOT IN THE BEFORE FILE — and NOT a change
+  resend._domainkey  TXT  a DKIM public key for Resend (value not reproduced here)
+  send               TXT  "v=spf1 include:amazonses.com ~all"
+  These two were hidden behind Namecheap's "Show More" when the before file was captured,
+  so they are absences in that record rather than additions to the zone. [Tyler]
+
+STILL OUTSTANDING (Tyler, in Google Admin): DKIM for Google Workspace is not published.
+  A lookup of google._domainkey returns nothing. SPF alone does not authenticate the message
+  body; DKIM is the other half, and DMARC stays at p=none until both are in place.
